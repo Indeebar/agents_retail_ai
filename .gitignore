@@ -173,14 +173,22 @@ data/*.parquet
 data/*.pkl
 data/*.pickle
 
-# Model directories (except structure files like config.json, tokenizer_config.json)
-intent_agent/intent_agent/models/intent_classifier/*
+# Model files to ignore (specific large files)
+intent_agent/intent_agent/models/intent_classifier/*.safetensors
+intent_agent/intent_agent/models/intent_classifier/*.bin
+intent_agent/intent_agent/models/intent_classifier/*.pth
+intent_agent/intent_agent/models/intent_classifier/*.pt
+intent_agent/intent_agent/models/intent_classifier/*.ckpt
+intent_agent/intent_agent/models/intent_classifier/*.h5
+intent_agent/intent_agent/models/intent_classifier/*.pb
 
 # But allow model config files to be tracked
 !intent_agent/intent_agent/models/intent_classifier/config.json
 !intent_agent/intent_agent/models/intent_classifier/special_tokens_map.json
 !intent_agent/intent_agent/models/intent_classifier/tokenizer_config.json
 !intent_agent/intent_agent/models/intent_classifier/vocab.txt
+!intent_agent/intent_agent/models/intent_classifier/added_tokens.json
+!intent_agent/intent_agent/models/intent_classifier/tokenizer.json
 
 # Temporary files
 *.tmp
