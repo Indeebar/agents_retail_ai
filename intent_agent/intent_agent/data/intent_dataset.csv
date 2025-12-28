@@ -1,0 +1,26 @@
+text,label
+show me smartphones,browse
+find me a good laptop,browse
+what cameras do you have,browse
+show me running shoes,browse
+display watches under 5000,browse
+i want to buy a phone,purchase
+add this laptop to cart,purchase
+place an order for camera,purchase
+buy these shoes now,purchase
+order the watch please,purchase
+which is better phone a or b,compare
+compare these two laptops,compare
+difference between camera models,compare
+which shoes are better,compare
+compare prices of watches,compare
+reserve this item for me,reserve
+hold this phone for me,reserve
+book the laptop in store,reserve
+i want to try this in store,reserve
+can you reserve this camera,reserve
+i need to return this item,support
+where is my order,support
+refund for damaged product,support
+complaint about delivery,support
+exchange policy for watch,support

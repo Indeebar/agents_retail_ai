@@ -1,0 +1,242 @@
+{
+  "PRD-FT-0001": {
+    "store_1": 14,
+    "store_2": 11,
+    "store_3": 8,
+    "store_4": 18,
+    "store_5": 12,
+    "warehouse_1": 163
+  },
+  "PRD-AC-0002": {
+    "store_1": 11,
+    "store_2": 3,
+    "store_3": 7,
+    "store_4": 15,
+    "store_5": 0,
+    "warehouse_1": 158
+  },
+  "PRD-AC-0003": {
+    "store_1": 17,
+    "store_2": 10,
+    "store_3": 19,
+    "store_4": 7,
+    "store_5": 20,
+    "warehouse_1": 16
+  },
+  "PRD-AP-0004": {
+    "store_1": 20,
+    "store_2": 14,
+    "store_3": 9,
+    "store_4": 20,
+    "store_5": 13,
+    "warehouse_1": 29
+  },
+  "PRD-AC-0005": {
+    "store_1": 4,
+    "store_2": 1,
+    "store_3": 1,
+    "store_4": 9,
+    "store_5": 15,
+    "warehouse_1": 29
+  },
+  "PRD-HM-0006": {
+    "store_1": 3,
+    "store_2": 7,
+    "store_3": 17,
+    "store_4": 4,
+    "store_5": 12,
+    "warehouse_1": 116
+  },
+  "PRD-AP-0007": {
+    "store_1": 11,
+    "store_2": 17,
+    "store_3": 13,
+    "store_4": 18,
+    "store_5": 4,
+    "warehouse_1": 106
+  },
+  "PRD-FT-0008": {
+    "store_1": 20,
+    "store_2": 3,
+    "store_3": 15,
+    "store_4": 19,
+    "store_5": 13,
+    "warehouse_1": 71
+  },
+  "PRD-TC-0009": {
+    "store_1": 1,
+    "store_2": 11,
+    "store_3": 6,
+    "store_4": 14,
+    "store_5": 14,
+    "warehouse_1": 60
+  },
+  "PRD-HM-0010": {
+    "store_1": 11,
+    "store_2": 3,
+    "store_3": 11,
+    "store_4": 17,
+    "store_5": 20,
+    "warehouse_1": 91
+  },
+  "PRD-AP-0011": {
+    "store_1": 1,
+    "store_2": 12,
+    "store_3": 8,
+    "store_4": 6,
+    "store_5": 3,
+    "warehouse_1": 116
+  },
+  "PRD-FT-0012": {
+    "store_1": 2,
+    "store_2": 6,
+    "store_3": 20,
+    "store_4": 20,
+    "store_5": 19,
+    "warehouse_1": 5
+  },
+  "PRD-FT-0013": {
+    "store_1": 1,
+    "store_2": 10,
+    "store_3": 7,
+    "store_4": 4,
+    "store_5": 18,
+    "warehouse_1": 52
+  },
+  "PRD-TC-0014": {
+    "store_1": 2,
+    "store_2": 17,
+    "store_3": 6,
+    "store_4": 18,
+    "store_5": 6,
+    "warehouse_1": 59
+  },
+  "PRD-HM-0015": {
+    "store_1": 10,
+    "store_2": 4,
+    "store_3": 19,
+    "store_4": 0,
+    "store_5": 8,
+    "warehouse_1": 37
+  },
+  "PRD-HM-0016": {
+    "store_1": 4,
+    "store_2": 17,
+    "store_3": 8,
+    "store_4": 5,
+    "store_5": 3,
+    "warehouse_1": 169
+  },
+  "PRD-TC-0017": {
+    "store_1": 0,
+    "store_2": 4,
+    "store_3": 0,
+    "store_4": 11,
+    "store_5": 7,
+    "warehouse_1": 150
+  },
+  "PRD-TC-0018": {
+    "store_1": 10,
+    "store_2": 0,
+    "store_3": 5,
+    "store_4": 8,
+    "store_5": 1,
+    "warehouse_1": 32
+  },
+  "PRD-AP-0019": {
+    "store_1": 13,
+    "store_2": 16,
+    "store_3": 3,
+    "store_4": 2,
+    "store_5": 15,
+    "warehouse_1": 114
+  },
+  "PRD-FT-0020": {
+    "store_1": 11,
+    "store_2": 16,
+    "store_3": 18,
+    "store_4": 3,
+    "store_5": 14,
+    "warehouse_1": 128
+  },
+  "PRD-FT-0021": {
+    "store_1": 7,
+    "store_2": 19,
+    "store_3": 1,
+    "store_4": 16,
+    "store_5": 9,
+    "warehouse_1": 117
+  },
+  "PRD-AP-0022": {
+    "store_1": 20,
+    "store_2": 0,
+    "store_3": 1,
+    "store_4": 15,
+    "store_5": 12,
+    "warehouse_1": 109
+  },
+  "PRD-HM-0023": {
+    "store_1": 3,
+    "store_2": 15,
+    "store_3": 14,
+    "store_4": 2,
+    "store_5": 2,
+    "warehouse_1": 82
+  },
+  "PRD-AP-0024": {
+    "store_1": 19,
+    "store_2": 4,
+    "store_3": 2,
+    "store_4": 4,
+    "store_5": 8,
+    "warehouse_1": 159
+  },
+  "PRD-FT-0025": {
+    "store_1": 20,
+    "store_2": 18,
+    "store_3": 17,
+    "store_4": 10,
+    "store_5": 12,
+    "warehouse_1": 152
+  },
+  "PRD-TC-0026": {
+    "store_1": 16,
+    "store_2": 9,
+    "store_3": 14,
+    "store_4": 16,
+    "store_5": 19,
+    "warehouse_1": 110
+  },
+  "PRD-TC-0027": {
+    "store_1": 3,
+    "store_2": 3,
+    "store_3": 20,
+    "store_4": 20,
+    "store_5": 17,
+    "warehouse_1": 184
+  },
+  "PRD-AC-0028": {
+    "store_1": 6,
+    "store_2": 13,
+    "store_3": 14,
+    "store_4": 7,
+    "store_5": 13,
+    "warehouse_1": 86
+  },
+  "PRD-TC-0029": {
+    "store_1": 14,
+    "store_2": 12,
+    "store_3": 13,
+    "store_4": 3,
+    "store_5": 10,
+    "warehouse_1": 109
+  },
+  "PRD-TC-0030": {
+    "store_1": 10,
+    "store_2": 8,
+    "store_3": 11,
+    "store_4": 4,
+    "store_5": 15,
+    "warehouse_1": 17
+  }
+}

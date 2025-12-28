@@ -1,0 +1,293 @@
+[
+  {
+    "id": "CUST0001",
+    "name": "Todd Hudson",
+    "email": "harveyrobert@example.net",
+    "loyalty_tier": "Gold",
+    "past_purchases": [],
+    "preferred_brands": [
+      "Crate & Barrel",
+      "Puma",
+      "CB2"
+    ],
+    "preferred_store": "store_4",
+    "sizes": {
+      "shoe": "US 10",
+      "clothing": "XS"
+    },
+    "last_channel": "web"
+  },
+  {
+    "id": "CUST0002",
+    "name": "Emily Green",
+    "email": "john62@example.net",
+    "loyalty_tier": "Bronze",
+    "past_purchases": [
+      {
+        "sku": "PRD-HM-0010",
+        "date": "2025-05-21",
+        "price": 10647
+      },
+      {
+        "sku": "PRD-TC-0029",
+        "date": "2025-10-06",
+        "price": 10391
+      },
+      {
+        "sku": "PRD-FT-0001",
+        "date": "2025-06-06",
+        "price": 12649
+      },
+      {
+        "sku": "PRD-AC-0002",
+        "date": "2025-05-04",
+        "price": 2019
+      }
+    ],
+    "preferred_brands": [
+      "Zara",
+      "New Balance",
+      "IKEA"
+    ],
+    "preferred_store": "store_1",
+    "sizes": {
+      "shoe": "US 9",
+      "clothing": "XS"
+    },
+    "last_channel": "web"
+  },
+  {
+    "id": "CUST0003",
+    "name": "Joyce Hickman",
+    "email": "smithchristine@example.net",
+    "loyalty_tier": null,
+    "past_purchases": [],
+    "preferred_brands": [
+      "Pottery Barn",
+      "New Balance",
+      "Gucci"
+    ],
+    "preferred_store": "store_4",
+    "sizes": {
+      "shoe": "US 10",
+      "clothing": "XXL"
+    },
+    "last_channel": "mobile_app"
+  },
+  {
+    "id": "CUST0004",
+    "name": "Angel Lewis MD",
+    "email": "nicole35@example.com",
+    "loyalty_tier": null,
+    "past_purchases": [],
+    "preferred_brands": [
+      "Crate & Barrel",
+      "Zara",
+      "CB2"
+    ],
+    "preferred_store": "store_2",
+    "sizes": {
+      "shoe": "US 9",
+      "clothing": "XL"
+    },
+    "last_channel": "mobile_app"
+  },
+  {
+    "id": "CUST0005",
+    "name": "Roy Warner",
+    "email": "contrerasangela@example.net",
+    "loyalty_tier": "Bronze",
+    "past_purchases": [],
+    "preferred_brands": [
+      "Kate Spade",
+      "Pottery Barn",
+      "CB2"
+    ],
+    "preferred_store": "store_1",
+    "sizes": {
+      "shoe": "US 9",
+      "clothing": "M"
+    },
+    "last_channel": "mobile_app"
+  },
+  {
+    "id": "CUST0006",
+    "name": "Shawn Baker",
+    "email": "newtoneric@example.com",
+    "loyalty_tier": "Gold",
+    "past_purchases": [
+      {
+        "sku": "PRD-AP-0004",
+        "date": "2025-01-15",
+        "price": 12705
+      },
+      {
+        "sku": "PRD-FT-0008",
+        "date": "2025-05-04",
+        "price": 7096
+      },
+      {
+        "sku": "PRD-FT-0013",
+        "date": "2025-01-13",
+        "price": 13281
+      }
+    ],
+    "preferred_brands": [
+      "Zara",
+      "CB2",
+      "H&M"
+    ],
+    "preferred_store": "store_3",
+    "sizes": {
+      "shoe": "US 9",
+      "clothing": "M"
+    },
+    "last_channel": "mobile_app"
+  },
+  {
+    "id": "CUST0007",
+    "name": "Michelle Harris",
+    "email": "william40@example.org",
+    "loyalty_tier": null,
+    "past_purchases": [
+      {
+        "sku": "PRD-HM-0016",
+        "date": "2025-07-09",
+        "price": 8118
+      },
+      {
+        "sku": "PRD-TC-0027",
+        "date": "2024-12-28",
+        "price": 14592
+      },
+      {
+        "sku": "PRD-TC-0029",
+        "date": "2025-05-07",
+        "price": 10391
+      },
+      {
+        "sku": "PRD-HM-0010",
+        "date": "2025-07-14",
+        "price": 10647
+      }
+    ],
+    "preferred_brands": [
+      "Zara",
+      "Ray-Ban",
+      "Coach"
+    ],
+    "preferred_store": "store_4",
+    "sizes": {
+      "shoe": "US 8",
+      "clothing": "XS"
+    },
+    "last_channel": "web"
+  },
+  {
+    "id": "CUST0008",
+    "name": "Sandra Williams",
+    "email": "kellie42@example.net",
+    "loyalty_tier": "Bronze",
+    "past_purchases": [
+      {
+        "sku": "PRD-AC-0002",
+        "date": "2025-08-28",
+        "price": 2019
+      },
+      {
+        "sku": "PRD-AP-0019",
+        "date": "2025-09-18",
+        "price": 6881
+      },
+      {
+        "sku": "PRD-FT-0012",
+        "date": "2025-06-05",
+        "price": 10892
+      }
+    ],
+    "preferred_brands": [
+      "Gucci",
+      "CB2",
+      "Crate & Barrel"
+    ],
+    "preferred_store": "store_2",
+    "sizes": {
+      "shoe": "US 11",
+      "clothing": "XS"
+    },
+    "last_channel": "web"
+  },
+  {
+    "id": "CUST0009",
+    "name": "Michael Hoffman",
+    "email": "jonesnicole@example.org",
+    "loyalty_tier": null,
+    "past_purchases": [
+      {
+        "sku": "PRD-TC-0030",
+        "date": "2025-06-05",
+        "price": 11355
+      },
+      {
+        "sku": "PRD-TC-0027",
+        "date": "2025-05-14",
+        "price": 14592
+      },
+      {
+        "sku": "PRD-HM-0016",
+        "date": "2025-09-06",
+        "price": 8118
+      }
+    ],
+    "preferred_brands": [
+      "Coach",
+      "Sony",
+      "New Balance"
+    ],
+    "preferred_store": "store_2",
+    "sizes": {
+      "shoe": "US 10",
+      "clothing": "M"
+    },
+    "last_channel": "in_store"
+  },
+  {
+    "id": "CUST0010",
+    "name": "Sandra Aguilar",
+    "email": "russellwilliams@example.com",
+    "loyalty_tier": "Bronze",
+    "past_purchases": [
+      {
+        "sku": "PRD-FT-0012",
+        "date": "2025-10-27",
+        "price": 10892
+      },
+      {
+        "sku": "PRD-AC-0003",
+        "date": "2025-06-21",
+        "price": 10480
+      },
+      {
+        "sku": "PRD-TC-0026",
+        "date": "2025-02-02",
+        "price": 6082
+      },
+      {
+        "sku": "PRD-FT-0013",
+        "date": "2025-09-01",
+        "price": 13281
+      }
+    ],
+    "preferred_brands": [
+      "Sony",
+      "Nike",
+      "Crate & Barrel"
+    ],
+    "preferred_store": "store_2",
+    "sizes": {
+      "shoe": "US 11",
+      "clothing": "XXL"
+    },
+    "last_channel": "phone"
+  }
+]

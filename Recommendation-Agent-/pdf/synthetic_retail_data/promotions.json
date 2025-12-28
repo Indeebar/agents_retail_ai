@@ -1,0 +1,66 @@
+[
+  {
+    "promo_id": "PROMO001",
+    "description": "10% off on all Footwear",
+    "valid_from": "2025-11-04",
+    "valid_to": "2025-12-04",
+    "eligibility": {
+      "category": "Footwear"
+    },
+    "discount_type": "percent",
+    "value": 10,
+    "coupon_code": "FOOTWEAR10"
+  },
+  {
+    "promo_id": "PROMO002",
+    "description": "15% off for Gold and Platinum members",
+    "valid_from": "2025-11-04",
+    "valid_to": "2025-12-04",
+    "eligibility": {
+      "loyalty_tier": [
+        "Gold",
+        "Platinum"
+      ]
+    },
+    "discount_type": "percent",
+    "value": 15,
+    "coupon_code": "LOYALTY15"
+  },
+  {
+    "promo_id": "PROMO003",
+    "description": "Buy 2 Tech items, get 20% off",
+    "valid_from": "2025-11-04",
+    "valid_to": "2025-11-19",
+    "eligibility": {
+      "category": "Tech",
+      "min_quantity": 2
+    },
+    "discount_type": "percent",
+    "value": 20,
+    "coupon_code": "TECH20"
+  },
+  {
+    "promo_id": "PROMO004",
+    "description": "₹500 off on orders above ₹5000",
+    "valid_from": "2025-11-04",
+    "valid_to": "2025-12-19",
+    "eligibility": {
+      "min_order_value": 5000
+    },
+    "discount_type": "fixed",
+    "value": 500,
+    "coupon_code": "HIGHVALUE500"
+  },
+  {
+    "promo_id": "PROMO005",
+    "description": "Summer Sale - 25% off on Apparel",
+    "valid_from": "2025-11-04",
+    "valid_to": "2025-11-24",
+    "eligibility": {
+      "category": "Apparel"
+    },
+    "discount_type": "percent",
+    "value": 25,
+    "coupon_code": "SUMMER25"
+  }
+]

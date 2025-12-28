@@ -1,0 +1,67 @@
+Retail Recommendation Agent with RAG - Project Description for Resume
+
+PROJECT OVERVIEW:
+Developed a sophisticated retail recommendation system using Retrieval-Augmented Generation (RAG) architecture that combines vector similarity search with large language model capabilities to provide personalized product recommendations. The system generates synthetic retail data, creates product embeddings, stores them in a vector database, and retrieves relevant products based on user queries.
+
+TECHNICAL STACK:
+• Programming Language: Python
+• Development Environment: Jupyter Notebooks
+• Web Interface: Streamlit
+• Vector Database: Pinecone
+• Natural Language Processing: Sentence Transformers (all-MiniLM-L6-v2)
+• LLM Integration: Hugging Face (Llama-2-7b-chat)
+• Data Processing: Pandas, NumPy
+• API Management: python-dotenv for environment variables
+• Deployment: AWS Elastic Beanstalk, Docker
+
+KEY COMPONENTS AND IMPLEMENTATION:
+
+1. Synthetic Data Generation:
+   • Created a data generation module that produces realistic retail data including:
+     - 30 product entries with SKUs, descriptions, pricing, categories, brands
+     - 10 customer profiles with purchase histories
+     - Inventory data across 5 stores and 1 warehouse
+     - Promotional rules
+   • Generated placeholder images and product brochure PDFs
+   • Used Faker library for realistic data generation
+
+2. RAG Pipeline Implementation:
+   • Implemented sentence transformers to create 384-dimension product embeddings
+   • Integrated Pinecone vector database for efficient similarity search
+   • Developed a retriever function to find top-k similar products for user queries
+   • Created metadata-rich vector storage with product information
+
+3. Recommendation Engine:
+   • Built a complete recommendation pipeline combining retrieval and generation
+   • Integrated Llama-2 via Hugging Face Inference API for natural-language recommendations
+   • Implemented contextual prompting to generate personalized product suggestions
+   • Added filtering capabilities for price and category constraints
+
+4. Web Interface:
+   • Developed an interactive Streamlit web application for user interaction
+   • Created intuitive UI with query input, price sliders, and category filters
+   • Implemented real-time product recommendations with similarity scores
+   • Designed responsive interface with product metrics and descriptions
+
+5. Deployment Architecture:
+   • Configured AWS Elastic Beanstalk deployment with proper entry points
+   • Created Docker containerization support for scalable deployment
+   • Implemented environment variable management for API keys
+   • Designed security practices to protect sensitive credentials
+
+TECHNICAL PROCESSES:
+• Data Engineering: Synthetic data generation, JSON/CSV processing
+• Machine Learning: Text embedding generation, vector similarity search
+• Backend Development: API integration, database operations
+• Frontend Development: Interactive web UI with Streamlit
+• DevOps: Containerization with Docker, cloud deployment with AWS
+• System Design: RAG architecture implementation, microservices design
+
+KEY ACHIEVEMENTS:
+• Successfully implemented end-to-end RAG system from data generation to deployment
+• Created production-ready recommendation engine with filtering capabilities
+• Developed comprehensive documentation and deployment guides
+• Implemented secure handling of API keys and environment variables
+• Designed scalable architecture suitable for cloud deployment
+
+This project demonstrates expertise in AI/ML, full-stack development, cloud deployment, and modern software engineering practices.
