@@ -1,0 +1,212 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+retail_rag_env/
+venv/
+env/
+ENV/
+.venv
+env.bak/
+venv.bak/
+
+# Environment variables
+.env
+*.env
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+*.ipynb
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask stuff
+instance/
+.webassets-cache
+
+# Scrapy stuff
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# pipenv
+Pipfile.lock
+
+# PEP 582
+__pypackages__/
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# pytype
+.pytype/
+
+# Cython debug symbols
+cython_debug/
+
+# ML specific
+# Large model files
+*.bin
+*.safetensors
+*.pth
+*.pt
+*.ckpt
+*.h5
+*.pb
+*.onnx
+*.joblib
+
+# ML cache and data
+.cache/
+data/*.json
+data/*.csv
+data/*.parquet
+data/*.pkl
+data/*.pickle
+
+# Model directories (except structure files like config.json, tokenizer_config.json)
+intent_agent/intent_agent/models/intent_classifier/*
+
+# But allow model config files to be tracked
+!intent_agent/intent_agent/models/intent_classifier/config.json
+!intent_agent/intent_agent/models/intent_classifier/special_tokens_map.json
+!intent_agent/intent_agent/models/intent_classifier/tokenizer_config.json
+!intent_agent/intent_agent/models/intent_classifier/vocab.txt
+
+# Temporary files
+*.tmp
+*.temp
+
+# Coverage
+.coverage*
+coverage.xml
+
+# Docker
+.dockerignore
+!Dockerfile
+
+# Deployment
+.ebextensions/
+.elasticbeanstalk/
+
+# Checkpoint files
+**/checkpoints/
+**/checkpoint/
+
+# Large data files
+*.zip
+*.rar
+*.7z
+*.tar.gz
+*.tar.bz2
+*.dmg
+*.iso
