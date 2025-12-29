@@ -1,0 +1,26 @@
+id,name,category,price
+SKU001,Nike Air Max Running Shoes,footwear,8999
+SKU002,Adidas Ultraboost Sneakers,footwear,12999
+SKU003,Puma Training Shoes,footwear,5499
+SKU004,Reebok Classic Court Shoes,footwear,3999
+SKU005,Woodland Hiking Boots,footwear,7599
+SKU006,Levi's 501 Original Jeans,apparel,4599
+SKU007,Gucci Logo T-Shirt,apparel,15999
+SKU008,Adidas Track Pants,apparel,3299
+SKU009,Nike Dri-Fit Sports Bra,apparel,1899
+SKU010,Zara Slim Fit Shirt,apparel,2999
+SKU011,Apple iPhone 14,electronics,69999
+SKU012,Samsung Galaxy S23,electronics,59999
+SKU013,OnePlus 11R,electronics,41999
+SKU014,Realme C55,electronics,14999
+SKU015,Boat Rockerz Bluetooth Speaker,electronics,2499
+SKU016,Ray-Ban Aviator Sunglasses,accessories,18999
+SKU017,Titan Analog Watch,accessories,8999
+SKU018,Fastrack Digital Watch,accessories,2999
+SKU019,Leather Wallet by Allen Solly,accessories,1499
+SKU020,Crossbody Bag by H&M,accessories,3499
+SKU021,Canvas Shoes by Vans,footwear,6499
+SKU022,Cotton Polo Shirt,apparel,1799
+SKU023,Noise Smartwatch,electronics,4999
+SKU024,Backpack by American Tourister,accessories,2799
+SKU025,Running Shorts by Under Armour,apparel,2499
