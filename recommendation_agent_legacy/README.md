@@ -124,3 +124,16 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 🤝 Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.#
+
+
+
+
+# Recommendation Agent (Legacy)
+
+This folder contains my original recommendation system built earlier
+(using RAG, embeddings, and vector databases).
+
+It is kept frozen for reference and learning purposes.
+
+The active recommendation logic for the agentic system
+lives in /recommendation_agent (v2).
