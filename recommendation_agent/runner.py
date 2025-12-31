@@ -1,20 +1,26 @@
-from recommender import recommend_products
+from recommender import recommend_products_ml
+
 
 def main():
-    #hardcoded test input
-    category = "tech"
+    query = "affordable wireless headphones for daily use"
+    category = "electronics"
     max_price = 5000
     limit = 5
-    
-    recommended_products = recommend_products(category, max_price, limit)
-    print(recommended_products)
 
-    if not recommended_products:
-        print("No products found")
+    recommendations = recommend_products_ml(
+        query=query,
+        category=category,
+        max_price=max_price,
+        limit=limit
+    )
+
+    if not recommendations:
+        print("No products found.")
         return
-    
-     
-    for idx, product in enumerate(recommended_products, start=1):
+
+    print("\nML-Based Recommended Products:\n")
+
+    for idx, product in enumerate(recommendations, start=1):
         print(f"{idx}. {product['name']}")
         print(f"   Category: {product['category']}")
         print(f"   Price: ₹{product['price']}")
@@ -23,4 +29,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

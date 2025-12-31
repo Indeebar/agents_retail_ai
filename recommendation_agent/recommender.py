@@ -1,28 +1,72 @@
 import csv
-from itertools import product
-from typing import List, Dict,Optional
+from typing import List, Dict, Optional
 
 from filters import filter_by_category, filter_by_budget
-
-def load_products(csv_path:str)-> List[Dict]:
-  products=[]
-
-  with open(csv_path, newline='', encoding='utf-8') as csvfile:
-    reader = csv.DictReader(csvfile)
-    for row in reader:
-      products.append(row)
-
-  return products
+from ml.embedder import EmbeddingModel
+from ml.ranker import rank_products
 
 
+def load_products(csv_path: str) -> List[Dict]:
+    products = []
+
+    with open(csv_path, newline="", encoding="utf-8") as file:
+        reader = csv.DictReader(file)
+        for row in reader:
+            products.append(row)
+
+    return products
+
+
+
+# v2: Deterministic recommender
 def recommend_products(
     category: Optional[str] = None,
     max_price: Optional[float] = None,
     limit: int = 5
- ) -> List[Dict]:
-    products = load_products("recommendation_agent/data/products.csv")
+) -> List[Dict]:
 
+    products = load_products("recommendation_agent/data/products.csv")
     products = filter_by_category(products, category)
     products = filter_by_budget(products, max_price)
 
     return products[:limit]
+
+
+
+# v3: ML-based recommender
+
+def recommend_products_ml(
+    query: str,
+    category: Optional[str] = None,
+    max_price: Optional[float] = None,
+    limit: int = 5
+) -> List[Dict]:
+
+    # Step 1: deterministic filtering
+    products = load_products("recommendation_agent/data/products.csv")
+    products = filter_by_category(products, category)
+    products = filter_by_budget(products, max_price)
+
+    if not products:
+        return []
+
+    # Step 2: ML embedding + ranking
+    embedder = EmbeddingModel()
+
+    query_embedding = embedder.encode(query)
+
+    product_texts = [
+        f"{p.get('name', '')}. {p.get('description', '')}"
+        for p in products
+    ]
+
+    product_embeddings = embedder.encode(product_texts)
+
+    ranked_products = rank_products(
+        query_embedding=query_embedding,
+        product_embeddings=product_embeddings,
+        products=products,
+        top_k=limit
+    )
+
+    return ranked_products
