@@ -1,37 +1,27 @@
-from intent_agent.parser import parse_user_query
-from contracts import   IntentResult
-
-def get_intent(query:str) -> IntentResult:
-    raw=parse_user_query(query)
-
-    return {
-        "intent": raw.get("intent", "unknown"),
-        "category": raw.get("category"),
-        "budget": raw.get("budget"),
-        "confidence": None  # optional, safe default
-    }
-
-from recommendation_agent.recommender import recommend_products
-from .contracts import RecommendationResult
+from typing import Dict, Optional, List
 
 
-def get_recommendations(intent_data) -> RecommendationResult:
-    items = recommend_products(
-        query=intent_data["intent"],
-        category=intent_data["category"],
-        budget=intent_data["budget"]
-    )
+def adapt_intent_output(intent_result: Dict) -> Dict:
 
-    clean_items = [
-        {
-            "product_id": item["id"],
-            "name": item["name"],
-            "price": item["price"]
+    if not intent_result:
+        return {
+            "intent": None,
+            "category": None,
+            "budget": None
         }
-        for item in items
-    ]
 
     return {
-        "items": clean_items,
-        "source": "recommendation_agent"
+        "intent": intent_result.get("intent"),
+        "category": intent_result.get("category"),
+        "budget": intent_result.get("budget")
     }
+
+
+def adapt_recommendation_output(
+    recommendations: Optional[List[Dict]]
+) -> List[Dict]:
+
+    if not recommendations:
+        return []
+
+    return recommendations
