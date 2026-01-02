@@ -3,7 +3,7 @@ from recommender import recommend_products_ml
 
 def main():
     query = "affordable wireless headphones for daily use"
-    category = "electronics"
+    category = "tech"
     max_price = 5000
     limit = 5
 
