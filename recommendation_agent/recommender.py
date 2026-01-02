@@ -1,3 +1,6 @@
+_PRODUCT_EMBEDDINGS_CACHE = None
+_PRODUCT_TEXTS_CACHE = None
+
 import csv
 from typing import List, Dict, Optional
 
@@ -42,7 +45,9 @@ def recommend_products_ml(
     limit: int = 5
 ) -> List[Dict]:
 
-    # Step 1: deterministic filtering
+    global _PRODUCT_EMBEDDINGS_CACHE, _PRODUCT_TEXTS_CACHE
+
+    # Step 1: deterministic filtering (v2)
     products = load_products("recommendation_agent/data/products.csv")
     products = filter_by_category(products, category)
     products = filter_by_budget(products, max_price)
@@ -50,23 +55,37 @@ def recommend_products_ml(
     if not products:
         return []
 
-    # Step 2: ML embedding + ranking
-    embedder = EmbeddingModel()
+    # Step 2: ML embedding + ranking (v3)
+    try:
+        embedder = EmbeddingModel()
 
-    query_embedding = embedder.encode(query)
+        product_texts = [
+            f"{p.get('name', '')}. {p.get('description', '')}"
+            for p in products
+        ]
 
-    product_texts = [
-        f"{p.get('name', '')}. {p.get('description', '')}"
-        for p in products
-    ]
+        # Cache product embeddings
+        if (
+            _PRODUCT_EMBEDDINGS_CACHE is None
+            or _PRODUCT_TEXTS_CACHE != product_texts
+        ):
+            _PRODUCT_EMBEDDINGS_CACHE = embedder.encode(product_texts)
+            _PRODUCT_TEXTS_CACHE = product_texts
 
-    product_embeddings = embedder.encode(product_texts)
+        query_embedding = embedder.encode(query)
+        product_embeddings = _PRODUCT_EMBEDDINGS_CACHE
 
-    ranked_products = rank_products(
-        query_embedding=query_embedding,
-        product_embeddings=product_embeddings,
-        products=products,
-        top_k=limit
-    )
+        ranked_products = rank_products(
+            query_embedding=query_embedding,
+            product_embeddings=product_embeddings,
+            products=products,
+            top_k=limit
+        )
 
-    return ranked_products
+        return ranked_products
+
+    except Exception:
+        # Graceful fallback to deterministic v2
+        return products[:limit]
+
+
