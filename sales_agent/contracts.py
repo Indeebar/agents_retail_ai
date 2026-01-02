@@ -1,26 +1,30 @@
-from typing import optional,TypeDict,List
+from dataclasses import dataclass
+from typing import List, Optional, Dict
 
-class SalesAgentInput(TypeDict):
+
+# Incoming user request
+
+@dataclass
+class UserRequest:
     query: str
-    user_id:Optional[str]
-    session_id:Optional[str]
 
-class IntentResult(TypedDict):
-    intent: str            # purchase | browse | support | unknown
+
+# Internal sales context
+# (after calling worker agents)
+
+@dataclass
+class SalesContext:
+    intent: Optional[str]
     category: Optional[str]
-    budget: Optional[int]
-    confidence: Optional[float]
+    budget: Optional[float]
+    recommendations: List[Dict]
 
-class RecommendationItem(TypedDict):
-    product_id: str
-    name: str
-    price: int
-
-class RecommendationResult(TypedDict):
-    items: List[RecommendationItem]
-    source: str
-
-class SalesAgentResponse(TypedDict):
-    intent: IntentResult
-    recommendation: Optional[RecommendationResult]
-    
+# Final response to user
+@dataclass
+class SalesResponse:
+    success: bool
+    message: str
+    intent: Optional[str] = None
+    category: Optional[str] = None
+    budget: Optional[float] = None
+    products: Optional[List[Dict]] = None
