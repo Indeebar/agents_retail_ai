@@ -4,9 +4,15 @@ from intent_agent.rules.category import extract_category
 from intent_agent.rules.intent_rules import extract_intent_rule_based
 
 
+import os
+
+# Construct absolute path relative to this file
+model_dir = os.path.join(os.path.dirname(__file__), "models", "intent_classifier")
+csv_path = os.path.join(os.path.dirname(__file__), "data", "intent_dataset.csv")
+
 ml_intent_classifier = IntentClassifier(
-    model_path="intent_agent/models/intent_classifier",
-    csv_path="intent_agent/data/intent_dataset.csv"
+    model_path=model_dir,
+    csv_path=csv_path
 )
 
 

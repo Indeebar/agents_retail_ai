@@ -4,15 +4,21 @@ _PRODUCT_TEXTS_CACHE = None
 import csv
 from typing import List, Dict, Optional
 
-from filters import filter_by_category, filter_by_budget
-from ml.embedder import EmbeddingModel
-from ml.ranker import rank_products
+from .filters import filter_by_category, filter_by_budget
+from .ml.embedder import EmbeddingModel
+from .ml.ranker import rank_products
 
+
+import os
 
 def load_products(csv_path: str) -> List[Dict]:
     products = []
+    
+    # Get the directory of this file and construct the path relative to it
+    current_dir = os.path.dirname(__file__)
+    full_path = os.path.join(current_dir, csv_path)
 
-    with open(csv_path, newline="", encoding="utf-8") as file:
+    with open(full_path, newline="", encoding="utf-8") as file:
         reader = csv.DictReader(file)
         for row in reader:
             products.append(row)
@@ -28,7 +34,7 @@ def recommend_products(
     limit: int = 5
 ) -> List[Dict]:
 
-    products = load_products("recommendation_agent/data/products.csv")
+    products = load_products("data/products.csv")
     products = filter_by_category(products, category)
     products = filter_by_budget(products, max_price)
 
@@ -48,7 +54,7 @@ def recommend_products_ml(
     global _PRODUCT_EMBEDDINGS_CACHE, _PRODUCT_TEXTS_CACHE
 
     # Step 1: deterministic filtering (v2)
-    products = load_products("recommendation_agent/data/products.csv")
+    products = load_products("data/products.csv")
     products = filter_by_category(products, category)
     products = filter_by_budget(products, max_price)
 
