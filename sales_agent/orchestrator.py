@@ -13,6 +13,7 @@ from sales_agent.adapters import (
 # Import worker agents
 from intent_agent.parser import parse_user_query
 from recommendation_agent.recommender import recommend_products
+from inventory_agent.checker import filter_in_stock_products
 
 
 def handle_user_query(query: str) -> SalesResponse:
@@ -65,6 +66,7 @@ def handle_user_query(query: str) -> SalesResponse:
         raw_recommendations = []
 
     recommendations = adapt_recommendation_output(raw_recommendations)
+    recommendations = filter_in_stock_products(recommendations)
 
     
     # Step 3: Build Context
