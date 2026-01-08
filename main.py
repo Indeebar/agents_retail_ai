@@ -1,4 +1,5 @@
 from sales_agent.orchestrator import handle_user_query
+from inventory_agent.checker import store
 
 
 def main():
