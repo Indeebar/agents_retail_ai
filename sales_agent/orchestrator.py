@@ -14,6 +14,8 @@ from sales_agent.adapters import (
 from intent_agent.parser import parse_user_query
 from recommendation_agent.recommender import recommend_products
 from inventory_agent.checker import filter_in_stock_products
+from pricing_agent.rules import apply_pricing_rules
+
 
 
 def handle_user_query(query: str) -> SalesResponse:
@@ -68,8 +70,14 @@ def handle_user_query(query: str) -> SalesResponse:
     recommendations = adapt_recommendation_output(raw_recommendations)
     recommendations = filter_in_stock_products(recommendations)
 
+    # Step 3: Pricing & Offers (INSERT HERE)
+    recommendations = apply_pricing_rules(
+        recommendations,
+        budget=budget
+    )
+
     
-    # Step 3: Build Context
+    # Step 4: Build Context
     
     context = SalesContext(
         intent=intent,
@@ -79,7 +87,7 @@ def handle_user_query(query: str) -> SalesResponse:
     )
 
     
-    # Step 4: Final Response
+    # Step 5: Final Response
     
     return SalesResponse(
         success=True,
