@@ -50,6 +50,11 @@ def recommend_products_ml(
     max_price: Optional[float] = None,
     limit: int = 5
 ) -> List[Dict]:
+    if not query or not query.strip():
+        products = load_products("data/products.csv")
+        products = filter_by_category(products, category)
+        products = filter_by_budget(products, max_price)
+        return products[:limit]
 
     global _PRODUCT_EMBEDDINGS_CACHE, _PRODUCT_TEXTS_CACHE
 

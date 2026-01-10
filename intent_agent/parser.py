@@ -27,6 +27,13 @@ def extract_intent(text: str) -> str:
 
 
 def parse_user_query(text: str):
+    if not text or not text.strip():
+        return {
+            "intent": None,
+            "category": None,
+            "budget": None
+        }
+    
     return {
         "intent": extract_intent(text),
         "category": extract_category(text),

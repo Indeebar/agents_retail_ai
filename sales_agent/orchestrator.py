@@ -24,6 +24,12 @@ def handle_user_query(query: str) -> SalesResponse:
     Orchestrates Intent and Recommendation agents.
     """
 
+    if not query or not query.strip():
+        return SalesResponse(
+            success=False,
+            message="Please provide a valid query"
+        )
+
     user_request = UserRequest(query=query)
 
     
