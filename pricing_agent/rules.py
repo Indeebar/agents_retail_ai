@@ -11,7 +11,10 @@ def apply_pricing_rules(products, budget=None):
     updated = []
 
     for product in products:
-        price = int(product.get("price", 0))
+        try:
+            price = int(product.get("price", 0))
+        except Exception:
+            continue  # Skip product if price is missing or not numeric
         category = product.get("category")
 
         # Rule 1: Discount
