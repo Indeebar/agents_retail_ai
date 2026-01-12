@@ -48,19 +48,18 @@ def handle_user_query(query: str) -> SalesResponse:
     intent: Optional[str] = intent_data.get("intent")
     category: Optional[str] = intent_data.get("category")
     budget: Optional[float] = intent_data.get("budget")
+    is_product_seeking: bool = intent_data.get("is_product_seeking", False)
 
-    if intent is None:
+    # Only return error if not product-seeking
+    if not is_product_seeking:
         return SalesResponse(
             success=False,
-            message="Could not determine user intent"
+            message="Sorry, I can only help with product recommendations. Please ask about products you're interested in."
         )
 
-    if intent not in ["purchase", "browse"]:
-        return SalesResponse(
-            success=True,
-            message="Intent recognized but not supported yet",
-            intent=intent
-        )
+    # If category is unknown, we can still try to provide general recommendations
+    if not category or category == "unknown":
+        category = None
 
     
     # Step 2: Recommendations

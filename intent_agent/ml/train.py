@@ -9,7 +9,15 @@ def train():
     device=torch.device("cuda" if torch.cuda.is_available() else "cpu")
     
     #Load Dataset
-    dataset = IntentDataset("../data/intent_dataset.csv")
+    # Use expanded dataset if available, otherwise fall back to original
+    import os
+    expanded_path = "../data/intent_dataset_expanded.csv"
+    original_path = "../data/intent_dataset.csv"
+    
+    if os.path.exists(expanded_path):
+        dataset = IntentDataset(expanded_path)
+    else:
+        dataset = IntentDataset(original_path)
 
 
     dataloader=DataLoader(dataset,batch_size=4,shuffle=True)
